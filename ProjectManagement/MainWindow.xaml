@@ -1,0 +1,93 @@
+﻿<Window x:Class="ProjectManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ProjectManagement" Height="450" Width="380"
+        Background="Transparent"
+        WindowStyle="ThreeDBorderWindow">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Border Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF3D3FAD" Offset="0.0"/>
+                        <GradientStop Color="#FFB281E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+
+            <StackPanel VerticalAlignment="Center">
+                <Image Source="Images/pm.png" Width="80"/>
+                <TextBlock Text="Project Management"
+                           FontWeight="Bold"
+                           FontFamily="helvetica"
+                           FontSize="22"
+                           Foreground="Black"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+
+
+
+            <StackPanel Grid.Row="1" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBox FontFamily="Helvetica"
+                             FontWeight="Light"
+                             Text="Username"
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="Black"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="235"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5"
+                             Height="25"
+                             Margin="63,0,0,0"/>
+                </StackPanel>
+                <Border Width="250"
+                        Height="2"
+                        Background="Black"
+                        Opacity="0.5"/>
+
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <PasswordBox FontFamily="Helvetica"
+                             FontWeight="Light"
+                             Password="Password"
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="Black"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="235"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5"
+                             Height="25"
+                             Margin="63,0,0,0"/>
+                </StackPanel>
+                <Border Width="250"
+                        Height="2"
+                        Background="Black"
+                        Opacity="0.5"/>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                    <Button Width="100" Height="40" Content="LOGIN" Margin="140,0,60,0" Click="Start"/>
+                </StackPanel>
+
+            </StackPanel>
+
+
+        </Grid>
+    </Grid>
+</Window>
+
+
+

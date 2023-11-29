@@ -1,0 +1,49 @@
+﻿<Window x:Class="ProjectManagement.Tasks.UpdateTaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectManagement.Tasks"
+        mc:Ignorable="d"
+        Title="UpdateTaskWindow" Height="280" Width="500">
+    <Grid>
+        <Border Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF3D3FAD" Offset="0.0"/>
+                    <GradientStop Color="#FFB281E6" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <StackPanel Margin="10">
+            <TextBlock Text="Изменить задачу" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10" />
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Проект:" FontWeight="Bold" Width="80" VerticalAlignment="Center" />
+                <ComboBox Name="Project_ID" Width="150" DisplayMemberPath="ProjectID" Margin="5,0" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Задача:" FontWeight="Bold" Width="80" VerticalAlignment="Center" />
+                <TextBox Name="nameTextBox" Width="150" Margin="5,0" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Описание:" FontWeight="Bold" Width="80" VerticalAlignment="Center" />
+                <TextBox Name="descriptionTextBox" Width="150" Margin="5,0" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Статус:" FontWeight="Bold" Width="80" VerticalAlignment="Center" />
+                <TextBox Name="statusTextBox" Width="150" Margin="5,0" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Приоритет:" FontWeight="Bold" Width="80" VerticalAlignment="Center" />
+                <TextBox Name="priorityTextBox" Width="150" Margin="5,0" />
+            </StackPanel>
+            <Button Content="Сохранить" Width="100" Background="#3498db" Foreground="White" Click="UpdateTaskSave" RenderTransformOrigin="0.513,2.045" />
+        </StackPanel>
+    </Grid>
+</Window>
